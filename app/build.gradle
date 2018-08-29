@@ -3,6 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 26
     defaultConfig {
+        manifestPlaceholders = [
+                onesignal_app_id: 'd153ab9b-1844-4a46-ad13-10bf8b8e13e0',
+                // Project number pulled from dashboard, local value is ignored.
+                onesignal_google_project_number: 'REMOTE'
+        ]
         applicationId "com.example.aulick.officesmartwatch"
         minSdkVersion 15
         targetSdkVersion 25
@@ -18,10 +23,27 @@ android {
     }
 }
 
+buildscript {
+    repositories {
+        maven { url 'https://plugins.gradle.org/m2/'}
+    }
+    dependencies {
+        classpath 'gradle.plugin.com.onesignal:onesignal-gradle-plugin:[0.11.0, 0.99.99]'
+    }
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://maven.google.com' }
+}
+
 dependencies {
+    implementation 'com.onesignal:OneSignal:[3.9.1, 3.99.99]'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'
+    implementation 'com.google.firebase:firebase-messaging:17.3.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
@@ -30,7 +52,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
     //add this dependency
     implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
 }
+
+apply plugin: 'com.google.gms.google-services'
