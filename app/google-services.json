@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "93733450543",
+    "firebase_url": "https://officesmartwatch-b7ffc.firebaseio.com",
+    "project_id": "officesmartwatch-b7ffc",
+    "storage_bucket": "officesmartwatch-b7ffc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93733450543:android:480c0e7192da32e1",
+        "android_client_info": {
+          "package_name": "com.example.aulick.officesmartwatch"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93733450543-asncphb92k2be421ra7bg7p1lq95o0f1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.aulick.officesmartwatch",
+            "certificate_hash": "720b231e61a2841976a5a1a17186af8bc6dc18c2"
+          }
+        },
+        {
+          "client_id": "93733450543-f9r8gsgs5dqbjd1s5eptkfcg138l9pml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCiwb3zOLvsmc7UsSuhCJgDcQFWmOH44-s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93733450543-f9r8gsgs5dqbjd1s5eptkfcg138l9pml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
