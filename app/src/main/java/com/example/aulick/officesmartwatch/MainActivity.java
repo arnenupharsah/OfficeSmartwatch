@@ -1,7 +1,9 @@
 package com.example.aulick.officesmartwatch;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.StrictMode;
@@ -10,6 +12,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,6 +34,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     //View Objects
     private Button buttonScan;
     private TextView textViewName, textViewAddress;
+
     static String EMAIL = "abhi1aa@outlook.com";
 //    static String qrcode;
 
@@ -143,6 +147,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                                 +   "\"app_id\": \"d153ab9b-1844-4a46-ad13-10bf8b8e13e0\","
                                 +   "\"include_player_ids\": [\""+qrcode+"\"],"
                                 +   "\"data\": {\"foo\": \"bar\"},"
+                                +   "\"buttons\": [{\"id\": \"id1\", \"text\": \"Accept\",\"icon\": \"ic_menu_share\" }, {\"id\": \"id2\", \"text\": \"Decline\",\"icon\": \"ic_menu_share\" }],"
                                 +   "\"contents\": {\"en\": \"English Message\"}"
                                 + "}";
 
