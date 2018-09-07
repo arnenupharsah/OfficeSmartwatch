@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient"
     tools:context=".Reply">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:orientation="vertical">
 
@@ -19,7 +19,18 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Sender's Name"
-            android:textSize="30dp" />
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:typeface="sans"
+            android:textColor="#FFFFFF" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:src="@drawable/knock"
+            android:tint="#FFF"
+            android:layout_gravity="center"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,21 +39,29 @@
 
             <Button
                 android:id="@+id/btn_accept"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left"
-                android:text="ACCEPT"
-
-                />
+                android:textStyle="bold"
+                android:padding="40dp"
+                android:layout_margin="20dp"
+                android:layout_alignParentTop="false"
+                android:layout_weight="0.5"
+                android:background="@drawable/round_button_accept"
+                android:text="ACCEPT"/>
 
             <Button
                 android:id="@+id/btn_decline"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:padding="40dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/round_button_decline"
                 android:text="DECLINE" />
 
         </LinearLayout>
 
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>
