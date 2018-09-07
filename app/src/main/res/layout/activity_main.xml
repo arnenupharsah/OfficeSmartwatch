@@ -52,11 +52,11 @@
     </LinearLayout>
 
     <!--<Button-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_above="@id/buttonScan"-->
-        <!--android:text="Send notification"-->
-        <!--android:onClick="notify"/>-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@id/buttonScan"-->
+    <!--android:text="Send notification"-->
+    <!--android:onClick="notify"/>-->
 
     <Button
         android:id="@+id/buttonScan"
